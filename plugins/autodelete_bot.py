@@ -1,5 +1,4 @@
 
-import schedule
 import time
 from bot import Bot
 from config import TG_BOT_TOKEN

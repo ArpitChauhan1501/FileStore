@@ -37,7 +37,7 @@ FORCE_SUB_CHANNEL = int(os.environ.get("FORCE_SUB_CHANNEL", "0"))
 TG_BOT_WORKERS = int(os.environ.get("TG_BOT_WORKERS", "4"))
 
 #start message
-START_MSG = os.environ.get("START_MESSAGE", "Hello {first}\n\nWelcome to GTC File Bot,\nI can give you Files that you want for your learning.\nClick on the link provided by Admins to get the files.")
+START_MSG = os.environ.get("START_MESSAGE", "Hello {first}\nWelcome to GTC File Bot,\nI can give you Files that you want for your learning.\nClick on the link provided by Admins to get the files.")
 try:
     ADMINS=[]
     for x in (os.environ.get("ADMINS", "").split()):

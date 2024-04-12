@@ -4,7 +4,7 @@ from bot import Bot
 from config import TG_BOT_TOKEN
 
 # Set your Telegram bot token
-bot = telebot.TeleBot("TG_BOT_TOKEN")
+bot = bot.Bot("TG_BOT_TOKEN")
 
 # Define the message deletion function
 def delete_messages():

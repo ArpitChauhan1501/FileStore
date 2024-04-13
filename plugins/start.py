@@ -5,6 +5,8 @@
 
 import os
 import asyncio
+import time
+import string
 from pyrogram import Client, filters, __version__
 from pyrogram.enums import ParseMode
 from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton, CallbackQuery
@@ -16,7 +18,9 @@ from helper_func import subscribed, encode, decode, get_messages
 from database.database import add_user, del_user, full_userbase, present_user
 
 
-
+"""add time in seconds for waiting before delete 
+1 min = 60, 2 min = 60 × 2 = 120, 5 min = 60 × 5 = 300"""
+SECONDS = int(os.getenv("SECONDS", "1200"))
 
 @Bot.on_message(filters.command('start') & filters.private & subscribed)
 async def start_command(client: Client, message: Message):

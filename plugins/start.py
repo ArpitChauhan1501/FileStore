@@ -20,7 +20,7 @@ from database.database import add_user, del_user, full_userbase, present_user
 
 """add time in seconds for waiting before delete 
 1 min = 60, 2 min = 60 × 2 = 120, 5 min = 60 × 5 = 300"""
-SECONDS = int(os.getenv("SECONDS", "1200"))
+SECONDS = int(os.getenv("SECONDS", "120"))
 
 @Bot.on_message(filters.command('start') & filters.private & subscribed)
 async def start_command(client: Client, message: Message):

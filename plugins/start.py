@@ -1,4 +1,4 @@
-#(©)CodeXBotz
+(©)CodeXBotz
 
 
 
@@ -14,6 +14,8 @@ from bot import Bot
 from config import ADMINS, FORCE_MSG, START_MSG, CUSTOM_CAPTION, DISABLE_CHANNEL_BUTTON, PROTECT_CONTENT
 from helper_func import subscribed, encode, decode, get_messages
 from database.database import add_user, del_user, full_userbase, present_user
+
+
 
 
 @Bot.on_message(filters.command('start') & filters.private & subscribed)
@@ -94,7 +96,7 @@ async def start_command(client: Client, message: Message):
         await message.reply_text(
             text = START_MSG.format(
                 first = message.from_user.first_name,
-                last = mesage.from_user.last_name,
+                last = message.from_user.last_name,
                 username = None if not message.from_user.username else '@' + message.from_user.username,
                 mention = message.from_user.mention,
                 id = message.from_user.id

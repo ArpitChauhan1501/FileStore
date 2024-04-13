@@ -87,6 +87,15 @@ async def start_command(client: Client, message: Message):
                 await msg.copy(chat_id=message.from_user.id, caption = caption, parse_mode = ParseMode.HTML, reply_markup = reply_markup, protect_content=PROTECT_CONTENT)
             except:
                 pass
+                  SD = await message.reply_text("Files will be deleted After 2min (120 seconds).")
+            await asyncio.sleep(SECONDS)
+
+            for snt_msg in snt_msgs:
+                try:
+                    await snt_msg.delete()
+                    await SD.delete()
+                except:
+                pass
         return
     else:
         reply_markup = InlineKeyboardMarkup(

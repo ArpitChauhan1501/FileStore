@@ -89,7 +89,6 @@ async def start_command(client: Client, message: Message):
                 pass
                 temp_msg = await message.reply("Files will be deleted After 2min (120 seconds).")
             await asyncio.sleep(SECONDS)
-                try:
                 await temp_msg.delete()
                 await asyncio.delete()
              except:

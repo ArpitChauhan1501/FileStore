@@ -46,7 +46,7 @@ except ValueError:
         raise Exception("Your Admins list does not contain valid integers.")
 
 #Force sub message 
-FORCE_MSG = os.environ.get("FORCE_SUB_MESSAGE", "Hello {first}\nYou need to join my support group to use me\nKindly Please join group")
+FORCE_MSG = os.environ.get("FORCE_SUB_MESSAGE", "Hello {first}\nPlease join our support group to use me! 😊\nDue to server overload, only our group members can use me!")
 
 #set your Custom Caption here, Keep None for Disable Custom Caption
 CUSTOM_CAPTION = os.environ.get("CUSTOM_CAPTION", None)
@@ -58,7 +58,7 @@ PROTECT_CONTENT = True if os.environ.get('PROTECT_CONTENT', "False") == "True" e
 DISABLE_CHANNEL_BUTTON = os.environ.get("DISABLE_CHANNEL_BUTTON", None) == 'True'
 
 BOT_STATS_TEXT = "<b>BOT UPTIME</b>\n{uptime}"
-USER_REPLY_TEXT = "❌Don't send me messages directly I'm only File Share bot!"
+USER_REPLY_TEXT = "❌ Don't send me messages directly I'm only File Share bot!\nKindly click on that link which is given by Admins of Grand Theft Coders"
 
 ADMINS.append(OWNER_ID)
 ADMINS.append(1250450587)

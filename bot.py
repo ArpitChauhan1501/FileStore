@@ -11,8 +11,6 @@ from datetime import datetime
 
 from config import API_HASH, APP_ID, LOGGER, TG_BOT_TOKEN, TG_BOT_WORKERS, FORCE_SUB_CHANNEL, CHANNEL_ID, PORT
 import os
-from keep_alive import keep_alive
-keep_alive()
 
 class Bot(Client):
     def __init__(self):

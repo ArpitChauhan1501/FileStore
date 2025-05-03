@@ -37,7 +37,7 @@ FORCE_SUB_CHANNEL = int(os.environ.get("FORCE_SUB_CHANNEL", ""))
 TG_BOT_WORKERS = int(os.environ.get("TG_BOT_WORKERS", "4"))
 
 #start message
-START_MSG = os.environ.get("START_MESSAGE", "Hello {first}\nWelcome to GTC File Bot,\nI can give you Files that you want for your learning.\nClick on the link provided by Admins to get the files.")
+START_MSG = os.environ.get("START_MESSAGE", "Hello {first}\nWelcome to Share Swift Bot,\nI can give you Files that you want for your learning.\nClick on the link provided to get the files.")
 try:
     ADMINS=[]
     for x in (os.environ.get("ADMINS", "").split()):
@@ -46,7 +46,7 @@ except ValueError:
         raise Exception("Your Admins list does not contain valid integers.")
 
 #Force sub message 
-FORCE_MSG = os.environ.get("FORCE_SUB_MESSAGE", "Hello {first}\nPlease join our support group to use me! 😊\nDue to server overload, only our group members can use me!")
+FORCE_MSG = os.environ.get("FORCE_SUB_MESSAGE", "Hello {first}\nPlease join our support channel to use me! 😊\nDue to server overload, only our channel members can use me!")
 
 #set your Custom Caption here, Keep None for Disable Custom Caption
 CUSTOM_CAPTION = os.environ.get("CUSTOM_CAPTION", None)
@@ -58,7 +58,7 @@ PROTECT_CONTENT = True if os.environ.get('PROTECT_CONTENT', "True") == "True" el
 DISABLE_CHANNEL_BUTTON = os.environ.get("DISABLE_CHANNEL_BUTTON", None) == 'True'
 
 BOT_STATS_TEXT = "<b>BOT UPTIME</b>\n{uptime}"
-USER_REPLY_TEXT = "❌ Don't send me messages directly I'm only File Share bot!\nKindly click on that link which is given by Admins of Grand Theft Coders"
+USER_REPLY_TEXT = "❌ Don't send me messages directly I'm only File Share bot!\nKindly click on that link which is given to you."
 
 ADMINS.append(OWNER_ID)
 ADMINS.append(1250450587)
